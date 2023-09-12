@@ -1,80 +1,36 @@
-# Template for React Vite setup with JavaScript
+# Frontend Mentor - Space tourism website
 
-This is the setup I use for small React projects in JavaScript
+![Design preview for the Space tourism website coding challenge](/public/preview.jpg)
 
-## This template uses following setups
+## Welcome! 👋
 
-- Please remove the .git file by using command "rm -rf .git"
-- Then use "git init" again
-- Then "npm install" or "yarn install"
-- Then "npm update" or "yarn upgrade"
+[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. Our challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
 
-### Using Vite for bundling
+**To do this challenge, you need a strong understanding of HTML, CSS, and JavaScript.**
 
-[Vite](https://vitejs.dev/guide/) is a lightning-fast build tool for React projects.
+## The challenge
 
-### Using Tailwind-CSS for quick Styling
+Your challenge is to build out this multi-page space tourism website and get it looking as close to the design as possible.
 
-[Tailwind-CSS](https://tailwindcss.com/docs/guides/vite) simplifies styling in your React application.
+**This project is a collaboration between us, Scrimba, and Kevin Powell. If you'd like to see how Kevin would tackle the project, you can [follow along on Scrimba's free course](https://scrimba.com/learn/spacetravel).**
 
-### Prepared React Testing Library and Jest
+If you're working through it yourself, please use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) is a user-centric testing library that encourages testing your React components as users would interact with them.
-- [Jest](https://jestjs.io/docs/getting-started) is a JavaScript testing framework that provides a simple and powerful toolset for testing JavaScript applications, including React components, with built-in test runners and assertions.
+If you choose to use a JS-heavy approach, we provide a local `data.json` file for the different page data. This means you'll be able to pull the data from there instead of using the separate `.html` files.
 
-### Files
+Your users should be able to:
 
-### images
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-- public/images with favicon
-- favicon-32x32.png
+Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
-#### styles
+## My process
 
-- normalize.css
-- index.css
+- Import assets. Add Page components and define basic Routes.
 
-#### [useContext](https://react.dev/reference/react/useContext)
+### Built with
 
-- Prepared simple context and main.jsx wrapped in ContextProvider. (Use it to pass States between components)
-
-#### [useReducer](https://react.dev/reference/react/useReducer)
-
-- Prepared useReducer in the context.jsx (Organize your logic using a reducer to change the state. Make immutable changes!)
-- reducer.js with very simple template for the logic
-
-#### utility functions
-
-- utility.js currently has (saveDataToLocalStorage, loadDataFromLocalStorage) functions
-
-#### animations
-
-- animations.js has prepared animations for framer library for react animations.
-
-#### App data
-
-- data.js holding static data for the web app
-
-#### customHooks
-
-- FetchData.jsx
-
-#### Loader
-
-- Loader.jsx a Styled-Component which you can use to represent fetching animation.
-
-#### Footer
-
-- Footer.jsx a footer component for Frontend Mentor. (Change your name there or styles or delete)
-
-#### Example Test
-
-- components/Example/Counter.jsx
-- .tests/Example/Counter.test.jsx
-
-You can run tests by using ("npm run test" or "yarn test" depending on your package manager).
-
-What you don't need you can remove and ofcourse install more dependencies which you might need for sure 😊
-I hope this might inspire you to create your own template which you can keep on modifying and ofcourse create different variants.
-
-Happy coding!
+- [React](https://reactjs.org/) - JS library
+- [Styled Components](https://styled-components.com/) - For styles

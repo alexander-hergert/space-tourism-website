@@ -1,12 +1,8 @@
-import { useContext, createContext, useState, useReducer } from "react";
-import reducer from "./reducers/reducer";
+import { useContext, createContext, useState } from "react";
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const initialState = {}; //Can be anything
-  const [state, dispatch] = useReducer(reducer, initialState);
-
   const [isDarkMode, setIsDarkMode] = useState(false); //Example
 
   return (
@@ -14,8 +10,6 @@ export const AppProvider = ({ children }) => {
       value={{
         isDarkMode,
         setIsDarkMode,
-        state,
-        dispatch,
       }}
     >
       {children}
