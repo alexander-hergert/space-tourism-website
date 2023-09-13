@@ -30,6 +30,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 - Import assets. Add Page components and define basic Routes.
 - Add components and create basic structure of App.
+- Reorganize Routes and link Innerpages. Create basic Navbars to navigate.
 
 ### Built with
 
