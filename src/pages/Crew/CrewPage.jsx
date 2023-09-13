@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import CrewNavbar from "../../components/Crew/CrewNavbar";
 
 const CrewPage = () => {
   return (
-    <div>
+    <main>
+      <h3></h3>
       <div>
-        <Link to={`crew1`}>To Crew Inner</Link>
+        <h2></h2>
+        <p></p>
+        <CrewNavbar />
       </div>
       <div>
-        <Link to={`crew2`}>To Crew Inner</Link>
+        <img src="" alt="" />
       </div>
-      <div>
-        <Link to={`crew3`}>To Crew Inner</Link>
-      </div>
-      <Outlet />
-    </div>
+    </main>
   );
 };
 

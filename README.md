@@ -29,6 +29,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ## My process
 
 - Import assets. Add Page components and define basic Routes.
+- Add components and create basic structure of App.
 
 ### Built with
 
