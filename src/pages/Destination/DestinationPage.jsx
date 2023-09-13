@@ -1,29 +1,27 @@
 import React from "react";
-import DestinationNavbar from "../../components/Destination/DestinationNavbar";
+import styled from "styled-components";
+import DestinationInnerPage from "./DestinationInnerPage";
+
+const Style = styled.main`
+  min-height: 100vh;
+  background: url("/images/destination/background-destination-mobile.jpg")
+    center / cover no-repeat;
+  @media screen and (min-width: 768px) {
+    background: url("/images/destination/background-destination-tablet.jpg")
+      center / cover no-repeat;
+  }
+  @media screen and (min-width: 1024px) {
+    background: url("/images/destination/background-destination-desktop.jpg")
+      center / cover no-repeat;
+  }
+`;
 
 const DestinationPage = () => {
   return (
-    <main>
-      <h3></h3>
-      <div>
-        <img src="" alt="" />
-      </div>
-      <div>
-        <DestinationNavbar />
-        <h2></h2>
-        <p></p>
-        <div>
-          <div>
-            <h3></h3>
-            <p></p>
-          </div>
-          <div>
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </main>
+    <Style>
+      <h2>01 Pick your destination</h2>
+      <DestinationInnerPage />
+    </Style>
   );
 };
 

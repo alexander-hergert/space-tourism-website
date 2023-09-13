@@ -3,8 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
-      <ul className="flex justify-center gap-5">
+    <nav className="absolute flex items-center justify-around left-[50%] transform -translate-x-1/2">
+      <img src="/images/shared/logo.svg" alt="logo" />
+      <menu className="flex gap-5">
         <li>
           <NavLink
             style={({ isActive }) => {
@@ -12,7 +13,7 @@ const Navbar = () => {
             }}
             to="/"
           >
-            Home
+            00 Home
           </NavLink>
         </li>
         <li>
@@ -22,7 +23,7 @@ const Navbar = () => {
             }}
             to="/destination"
           >
-            Destination
+            01 Destination
           </NavLink>
         </li>
         <li>
@@ -32,7 +33,7 @@ const Navbar = () => {
             }}
             to="/crew"
           >
-            Crew
+            02 Crew
           </NavLink>
         </li>
         <li>
@@ -42,11 +43,11 @@ const Navbar = () => {
             }}
             to="/technology"
           >
-            Technology
+            03 Technology
           </NavLink>
         </li>
-      </ul>
-    </div>
+      </menu>
+    </nav>
   );
 };
 

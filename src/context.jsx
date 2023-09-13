@@ -1,15 +1,18 @@
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext } from "react";
+import useFetchData from "./customHooks/useFetchData";
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false); //Example
+  const { data, loading, error } = useFetchData("/data.json");
+  
 
   return (
     <AppContext.Provider
       value={{
-        isDarkMode,
-        setIsDarkMode,
+        data,
+        loading,
+        error,
       }}
     >
       {children}

@@ -31,7 +31,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Import assets. Add Page components and define basic Routes.
 - Add components and create basic structure of App.
 - Reorganize Routes and link Innerpages. Create basic Navbars to navigate.
-
+- Fetch data and add dynamic text into the elements. Add backgrounds. Link Inner pages.
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
