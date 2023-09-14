@@ -14,35 +14,28 @@ const DestinationInnerPage = () => {
 
   if (factsArray !== undefined) {
     const facts = factsArray[0];
-    console.log(facts);
-  }
-
-  if (factsArray !== undefined) {
-    const facts = factsArray[0];
 
     return (
       <>
-        <div><img src={facts?.image} alt={facts?.name} /></div>
+        <div>
+          <img src={facts?.image} alt={facts?.name} />
+        </div>
         <div>
           <DestinationNavbar />
           <h3>{facts?.name}</h3>
           <p>{facts?.description}</p>
           <div>
             <div>
-              <h4>Some Fact</h4>
-              <p>{facts?.someFact}</p>
+              <h4> Avg. distance</h4>
+              <p>{facts?.distance}</p>
             </div>
             <div>
-              <h4>Another Fact</h4>
-              <p>{facts?.anotherFact}</p>
+              <h4>Est. travel time</h4>
+              <p>{facts?.travel}</p>
             </div>
           </div>
         </div>
       </>
-    );
-  } else {
-    return (
-      <div>Destination not found. {/* You can add error handling here */}</div>
     );
   }
 };

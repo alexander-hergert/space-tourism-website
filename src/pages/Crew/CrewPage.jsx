@@ -1,6 +1,8 @@
-import React from "react";
-import CrewNavbar from "../../components/Crew/CrewNavbar";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import CrewInnerPage from "./CrewInnerPage";
+import { useNavigate } from "react-router";
+import { useParams } from "react-router";
 
 const Style = styled.main`
   min-height: 100vh;
@@ -17,17 +19,19 @@ const Style = styled.main`
 `;
 
 const CrewPage = () => {
+  const name = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (Object.keys(name).length === 0) {
+      navigate("/crew/commander");
+    }
+  }, []);
+
   return (
     <Style>
-      <h3></h3>
-      <div>
-        <h2></h2>
-        <p></p>
-        <CrewNavbar />
-      </div>
-      <div>
-        <img src="" alt="" />
-      </div>
+      <h3>02 Meet your crew</h3>
+      <CrewInnerPage />
     </Style>
   );
 };

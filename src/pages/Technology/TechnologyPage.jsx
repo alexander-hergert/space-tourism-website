@@ -1,6 +1,8 @@
-import React from "react";
-import TechnologyNavbar from "../../components/Technology/TechnologyNavbar";
+import React, {useEffect} from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router";
+import { useParams } from "react-router";
+import TechnologyInnerPage from "./TechnologyInnerPage";
 
 const Style = styled.main`
   min-height: 100vh;
@@ -17,17 +19,19 @@ const Style = styled.main`
 `;
 
 const TechnologyPage = () => {
+
+  const name = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (Object.keys(name).length === 0) {
+      navigate("/technology/launch vehicle");
+    }
+  }, []);
   return (
     <Style>
-      <h3></h3>
-      <div>
-        <TechnologyNavbar />
-        <h2></h2>
-        <p></p>
-      </div>
-      <div>
-        <img src="" alt="" />
-      </div>
+      <h3> 03 Space launch 101</h3>
+      <TechnologyInnerPage />
     </Style>
   );
 };

@@ -20,9 +20,9 @@ const CrewNavbar = () => {
             style={({ isActive }) => {
               return { color: isActive ? "blue" : "" };
             }}
-            to="/crew/engineer"
+            to="/crew/Mission Specialist"
           >
-            Engineer
+            Mission Specialist
           </NavLink>
         </li>
         <li>
@@ -40,9 +40,9 @@ const CrewNavbar = () => {
             style={({ isActive }) => {
               return { color: isActive ? "blue" : "" };
             }}
-            to="/crew/specialist"
+            to="/crew/Flight Engineer"
           >
-            Specialist
+            Flight Engineer
           </NavLink>
         </li>
       </ul>

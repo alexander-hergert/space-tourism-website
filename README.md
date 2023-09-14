@@ -32,6 +32,9 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add components and create basic structure of App.
 - Reorganize Routes and link Innerpages. Create basic Navbars to navigate.
 - Fetch data and add dynamic text into the elements. Add backgrounds. Link Inner pages.
+- Render all pages by using the fetched data and make the first item always be selected when nothing else is chosen.
+
+
 ### Built with
 
 - [React](https://reactjs.org/) - JS library

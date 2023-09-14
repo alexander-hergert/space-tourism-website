@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import DestinationInnerPage from "./DestinationInnerPage";
+import { useNavigate } from "react-router";
+import { useParams } from "react-router";
 
 const Style = styled.main`
   min-height: 100vh;
@@ -17,6 +19,15 @@ const Style = styled.main`
 `;
 
 const DestinationPage = () => {
+  const name = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (Object.keys(name).length === 0) {
+      navigate("/destination/moon");
+    }
+  }, []);
+
   return (
     <Style>
       <h2>01 Pick your destination</h2>
