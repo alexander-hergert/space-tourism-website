@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Style = styled.main`
   min-height: 100vh;
@@ -32,7 +33,7 @@ const HomePage = () => {
       </div>
       <div>
         <div className="grid place-content-center rounded-full w-[10rem] h-[10rem] bg-white text-black">
-          Explore
+          <Link to='/destination'>Explore</Link>
         </div>
       </div>
     </Style>

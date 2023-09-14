@@ -1,51 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import NavbarLink from "./NavbarLink.jsx";
 
 const Navbar = () => {
+  const navlinks = [
+    { link: "00 Home", path: "/" },
+    { link: "01 Destination", path: "/destination" },
+    { link: "02 Crew", path: "/crew" },
+    { link: "03 Technology", path: "/technology" },
+  ];
   return (
     <nav className="absolute flex items-center justify-around left-[50%] transform -translate-x-1/2">
       <img src="/images/shared/logo.svg" alt="logo" />
       <menu className="flex gap-5">
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "red" : "" };
-            }}
-            to="/"
-          >
-            00 Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "red" : "" };
-            }}
-            to="/destination"
-          >
-            01 Destination
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "red" : "" };
-            }}
-            to="/crew"
-          >
-            02 Crew
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "red" : "" };
-            }}
-            to="/technology"
-          >
-            03 Technology
-          </NavLink>
-        </li>
+        {navlinks.map((item) => (
+          <NavbarLink key={item.link} {...item} />
+        ))}
       </menu>
     </nav>
   );
