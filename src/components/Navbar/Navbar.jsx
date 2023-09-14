@@ -1,22 +1,38 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import NavbarLink from "./NavbarLink.jsx";
+import Menu from "./Menu.jsx";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navlinks = [
-    { link: "00 Home", path: "/" },
-    { link: "01 Destination", path: "/destination" },
-    { link: "02 Crew", path: "/crew" },
-    { link: "03 Technology", path: "/technology" },
+    { link: "Home", path: "/" },
+    { link: "Destination", path: "/destination" },
+    { link: "Crew", path: "/crew" },
+    { link: "Technology", path: "/technology" },
   ];
+
+  const handleOpenMenu = () => {
+    setIsMenuOpen(true);
+  };
+
   return (
-    <nav className="absolute flex items-center justify-around left-[50%] transform -translate-x-1/2">
+    <nav className="absolute flex items-center justify-between w-full p-10">
       <img src="/images/shared/logo.svg" alt="logo" />
-      <menu className="flex gap-5">
-        {navlinks.map((item) => (
-          <NavbarLink key={item.link} {...item} />
-        ))}
-      </menu>
+      <div>
+        <menu className="flex gap-5 max-md:hidden">
+          {navlinks.map((item, index) => (
+            <NavbarLink key={item.link} {...item} index={index} />
+          ))}
+        </menu>
+        <input
+          className="md:hidden"
+          type="image"
+          src="/images/shared/icon-hamburger.svg"
+          alt={"menu-icon"}
+          onClick={handleOpenMenu}
+        />
+      </div>
+      {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} navlinks={navlinks} />}
     </nav>
   );
 };

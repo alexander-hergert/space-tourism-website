@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Style = styled.main`
   min-height: 100vh;
+  padding-top: 10rem;
   background: url("/images/home/background-home-mobile.jpg") center / cover
     no-repeat;
   @media screen and (min-width: 768px) {
@@ -32,8 +33,9 @@ const HomePage = () => {
         </p>
       </div>
       <div>
-        <div className="grid place-content-center rounded-full w-[10rem] h-[10rem] bg-white text-black">
-          <Link to='/destination'>Explore</Link>
+        <div className="grid place-content-center rounded-full w-[10rem] h-[10rem]
+         bg-white text-black">
+          <Link to="/destination">Explore</Link>
         </div>
       </div>
     </Style>

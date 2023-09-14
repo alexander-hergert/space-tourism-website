@@ -34,6 +34,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Fetch data and add dynamic text into the elements. Add backgrounds. Link Inner pages.
 - Render all pages by using the fetched data and make the first item always be selected when nothing else is chosen.
 - Refactor Navbar and create NavLink component.
+- Add mobile design styles to Navbar.
 - Add mobile design styles to Homepage.
 
 ### Built with
