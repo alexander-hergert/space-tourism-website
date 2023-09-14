@@ -16,10 +16,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute flex items-center justify-between w-full p-10">
+    <nav
+      className="absolute flex items-center justify-between 
+    w-full pl-10 lg:pt-10"
+    >
       <img src="/images/shared/logo.svg" alt="logo" />
-      <div>
-        <menu className="flex gap-5 max-md:hidden">
+      <div className="relative left-10 lg:h-[1px] w-full bg-slate-300 ml-10"></div>
+      <div className="md:bg-[rgba(255,255,255,0.05)] p-10 lg:pr-0 lg:min-w-[60vw]">
+        <menu
+          className="flex justify-center gap-10 max-md:hidden 
+         xl:mr-20 2xl:mr-40"
+        >
           {navlinks.map((item, index) => (
             <NavbarLink key={item.link} {...item} index={index} />
           ))}

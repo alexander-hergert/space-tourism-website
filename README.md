@@ -35,6 +35,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Render all pages by using the fetched data and make the first item always be selected when nothing else is chosen.
 - Refactor Navbar and create NavLink component.
 - Add mobile design styles to Navbar.
+- Add tablet and desktop styles and active states to Navbar.
 - Add mobile design styles to Homepage.
 
 ### Built with
