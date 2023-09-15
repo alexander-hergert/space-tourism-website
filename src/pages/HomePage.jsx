@@ -20,12 +20,12 @@ const Style = styled.main`
 const HomePage = () => {
   return (
     <Style>
-      <div>
-        <h1>
+      <div className="max-w-[30rem] m-auto mt-10">
+        <h1 className="m-auto text-center uppercase font-light text-base-100">
           So, you want to travel to
-          <span className="text-4xl">Space</span>
+          <span className="text-8xl block mt-10 font md:text-10xl">SPACE</span>
         </h1>
-        <p>
+        <p className="m-auto text-center mt-10 font-light">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
@@ -33,9 +33,9 @@ const HomePage = () => {
         </p>
       </div>
       <div>
-        <div className="grid place-content-center rounded-full w-[10rem] h-[10rem]
-         bg-white text-black">
-          <Link to="/destination">Explore</Link>
+        <div className="grid font m-auto mt-20 place-content-center rounded-full w-[12rem] h-[12rem]
+         bg-white text-black text-2xl">
+          <Link to="/destination">EXPLORE</Link>
         </div>
       </div>
     </Style>
