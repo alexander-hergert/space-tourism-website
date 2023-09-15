@@ -37,6 +37,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add mobile design styles to Navbar.
 - Add tablet and desktop styles and active states to Navbar.
 - Add mobile design styles to Homepage.
+- Add tablet and desktop styles to Homepage.
 
 ### Built with
 
