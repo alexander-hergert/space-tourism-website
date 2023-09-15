@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 
 const Style = styled.main`
   min-height: 100vh;
+  padding-top: 10rem;
   background: url("/images/destination/background-destination-mobile.jpg")
     center / cover no-repeat;
   @media screen and (min-width: 768px) {
@@ -30,7 +31,9 @@ const DestinationPage = () => {
 
   return (
     <Style>
-      <h2>01 Pick your destination</h2>
+      <h2 className="m-auto text-center text-slate-400">
+        01 Pick your destination
+      </h2>
       <DestinationInnerPage />
     </Style>
   );

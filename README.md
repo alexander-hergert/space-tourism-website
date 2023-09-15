@@ -38,6 +38,8 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add tablet and desktop styles and active states to Navbar.
 - Add mobile design styles to Homepage.
 - Add tablet and desktop styles to Homepage.
+- Add mobile design styles to destination page.
+- Refactor DestinationNavbar and styles.
 
 ### Built with
 

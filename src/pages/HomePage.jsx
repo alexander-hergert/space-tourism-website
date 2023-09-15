@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <Style className="lg:flex justify-around items-center">
       <div
-        className="max-w-[30rem] m-auto mt-10 text-slate-400
+        className="max-w-[30rem] px-5 m-auto mt-10 text-slate-400
       lg:m-0"
       >
         <h1 className="m-auto text-center uppercase font-light lg:text-left">

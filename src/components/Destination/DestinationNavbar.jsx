@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const DestinationNavbar = () => {
   return (
-    <div>
+    <div className="mt-10">
       <ul className="flex justify-center gap-5">
         <li>
           <NavLink
