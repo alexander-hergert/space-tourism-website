@@ -1,50 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import DestinationNavbarLink from "./DestinationNavbarLink";
 
 const DestinationNavbar = () => {
+  const navlinks = [
+    { link: "Moon", path: "/destination/moon" },
+    { link: "Mars", path: "/destination/mars" },
+    { link: "Europa", path: "/destination/europa" },
+    { link: "Titan", path: "/destination/titan" },
+  ];
+
   return (
     <div className="mt-10">
       <ul className="flex justify-center gap-5">
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/destination/moon"
-          >
-            Moon
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/destination/mars"
-          >
-            Mars
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/destination/europa"
-          >
-            Europa
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/destination/titan"
-          >
-            Titan
-          </NavLink>
-        </li>
+        {navlinks.map((item) => (
+          <DestinationNavbarLink key={item.link} {...item} />
+        ))}
       </ul>
     </div>
   );

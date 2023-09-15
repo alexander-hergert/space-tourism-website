@@ -39,7 +39,8 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add mobile design styles to Homepage.
 - Add tablet and desktop styles to Homepage.
 - Add mobile design styles to destination page.
-- Refactor DestinationNavbar and styles.
+- Refactor DestinationNavbar and styles. Create DestinationNavbarLink component.
+- Add tablet and desktop styles to Destination page.
 
 ### Built with
 

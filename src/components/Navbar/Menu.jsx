@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarLink from "./NavbarLink.jsx";
+import NavbarLink from "./NavbarLink";
 import styled from "styled-components";
 
 const Overlay = styled.div`

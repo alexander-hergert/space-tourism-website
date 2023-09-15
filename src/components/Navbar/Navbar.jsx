@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import NavbarLink from "./NavbarLink.jsx";
-import Menu from "./Menu.jsx";
+import NavbarLink from "./NavbarLink";
+import Menu from "./Menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
