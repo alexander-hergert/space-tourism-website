@@ -1,50 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import CrewNavbarLink from "./CrewNavbarLink";
 
 const CrewNavbar = () => {
+  const navlinks = [
+    { path: "/crew/commander" },
+    { path: "/crew/Mission Specialist" },
+    { path: "/crew/pilot" },
+    { path: "/crew/Flight Engineer" },
+  ];
+
   return (
-    <div>
+    <div className="mt-10 md:mb-10">
       <ul className="flex justify-center gap-5">
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/crew/commander"
-          >
-            Commander
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/crew/Mission Specialist"
-          >
-            Mission Specialist
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/crew/pilot"
-          >
-            Pilot
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/crew/Flight Engineer"
-          >
-            Flight Engineer
-          </NavLink>
-        </li>
+        {navlinks.map((item) => (
+          <CrewNavbarLink key={item.path} {...item} />
+        ))}
       </ul>
     </div>
   );
