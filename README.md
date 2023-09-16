@@ -46,6 +46,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add desktop styles to Crew page.
 - Add mobile and tablet design styles to Technology page.
 - Refactor TechnologyNavbar and styles. Create TechnologyNavbarLink page.
+- Add desktop styles to Technology page.
 
 ### Built with
 

@@ -7,8 +7,8 @@ const Li = styled.li`
     display: grid;
     place-items: center;
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: ${(props) => props.size || "3rem"};
+    height: ${(props) => props.size || "3rem"};
     border: solid 1px white;
   }
 
@@ -19,9 +19,9 @@ const Li = styled.li`
   }
 `;
 
-const TechnologyNavbarLink = ({ link, path }) => {
+const TechnologyNavbarLink = ({ link, path, size }) => {
   return (
-    <Li>
+    <Li size={size}>
       <NavLink className={"text-white"} to={path}>
         {link}
       </NavLink>
