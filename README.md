@@ -43,6 +43,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add tablet and desktop styles to Destination page.
 - Add mobile and tablet design styles to crew page.
 - Refactor CrewNavbar and styles. Create CrewNavbarLink component.
+- Add desktop styles to Crew page.
 
 ### Built with
 

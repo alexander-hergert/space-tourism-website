@@ -1,8 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import CrewNavbarLink from "./CrewNavbarLink";
 
-const CrewNavbar = () => {
+const CrewNavbar = ({ styles }) => {
   const navlinks = [
     { path: "/crew/commander" },
     { path: "/crew/Mission Specialist" },
@@ -11,7 +10,7 @@ const CrewNavbar = () => {
   ];
 
   return (
-    <div className="mt-10 md:mb-10">
+    <div className={`mt-10 mb-10 ${styles}`}>
       <ul className="flex justify-center gap-5">
         {navlinks.map((item) => (
           <CrewNavbarLink key={item.path} {...item} />

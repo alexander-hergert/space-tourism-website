@@ -11,7 +11,7 @@ const Li = styled.li`
   display: grid;
   place-items: center;
 
-  &:hover {
+  :hover {
     background-color: white;
   }
 
