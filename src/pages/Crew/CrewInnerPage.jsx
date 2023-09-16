@@ -17,17 +17,21 @@ const CrewInnerPage = () => {
     const crew = crewArray[0];
 
     return (
-      <>
-        <div>
-          <h2>{crew?.role}</h2>
-          <h3>{crew?.name}</h3>
-          <p>{crew?.bio}</p>
+      <div className="flex flex-col md:flex-col-reverse ">
+        <div className="flex flex-col md:flex-col-reverse">
+          <div className="m-auto w-[50vw] max-w-[30rem]">
+            <img className="w-full" src={crew?.image} alt={crew?.name} />
+          </div>
           <CrewNavbar />
         </div>
-        <div>
-          <img src={crew?.image} alt={crew?.name} />
+        <div className="text-center m-auto max-w-[30rem]">
+          <h3 className="text-slate-400 uppercase">{crew?.role}</h3>
+          <h3 className="text-2xl uppercase">{crew?.name}</h3>
+          <p className="mt-10 text-slate-400 text-center px-5 lg:text-left lg:px-0">
+            {crew?.bio}
+          </p>
         </div>
-      </>
+      </div>
     );
   }
 };

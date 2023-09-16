@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 
 const Style = styled.main`
   min-height: 100vh;
+  padding-top: 10rem;
   background: url("/images/crew/background-crew-mobile.jpg") center / cover
     no-repeat;
   @media screen and (min-width: 768px) {
@@ -30,7 +31,12 @@ const CrewPage = () => {
 
   return (
     <Style>
-      <h3>02 Meet your crew</h3>
+      <h2
+        className="mb-10 text-center text-slate-400 uppercase 
+      lg:text-left lg:text-2xl lg:pl-[11rem]"
+      >
+        02 <span className="text-white">&nbsp;&nbsp;Meet your crew</span>
+      </h2>
       <CrewInnerPage />
     </Style>
   );

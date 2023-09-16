@@ -31,7 +31,7 @@ const DestinationPage = () => {
 
   return (
     <Style>
-      <h2 className="m-auto text-center text-slate-400 uppercase 
+      <h2 className="m-auto mb-20 text-center text-slate-400 uppercase 
       lg:text-left lg:text-2xl lg:pl-[11rem] lg:mt-10">
         01 <span className="text-white">&nbsp;&nbsp;Pick your destination</span>
       </h2>
