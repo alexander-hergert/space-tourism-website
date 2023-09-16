@@ -10,8 +10,8 @@ const DestinationNavbar = () => {
   ];
 
   return (
-    <div className="mt-10">
-      <ul className="flex justify-center gap-5">
+    <div className="mt-10 lg:mt-0">
+      <ul className="flex justify-center gap-5 lg:justify-start">
         {navlinks.map((item) => (
           <DestinationNavbarLink key={item.link} {...item} />
         ))}
