@@ -32,10 +32,10 @@ const CrewPage = () => {
   return (
     <Style>
       <h2
-        className="mb-10 text-center text-slate-400 uppercase 
-      lg:text-left lg:text-2xl lg:pl-[11rem]"
+        className="mb-10 text-center text-white uppercase 
+      md:text-left md:text-2xl md:pl-[4rem] lg:pl-[11rem]"
       >
-        02 <span className="text-white">&nbsp;&nbsp;Meet your crew</span>
+        <span className="text-slate-400">02</span> &nbsp;&nbsp;Meet your crew
       </h2>
       <CrewInnerPage />
     </Style>

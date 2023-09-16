@@ -31,9 +31,12 @@ const DestinationPage = () => {
 
   return (
     <Style>
-      <h2 className="m-auto mb-20 text-center text-slate-400 uppercase 
-      lg:text-left lg:text-2xl lg:pl-[11rem] lg:mt-10">
-        01 <span className="text-white">&nbsp;&nbsp;Pick your destination</span>
+      <h2
+        className="mb-10 text-center text-white uppercase 
+      md:text-left md:text-2xl md:pl-[4rem] lg:pl-[11rem]"
+      >
+        <span className="text-slate-400">01</span> &nbsp;&nbsp;Pick your
+        destination
       </h2>
       <DestinationInnerPage />
     </Style>

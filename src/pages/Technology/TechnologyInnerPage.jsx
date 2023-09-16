@@ -45,7 +45,7 @@ const TechnologyInnerPage = () => {
               />
             )}
           </div>
-          <h2 className="uppercase mt-10">The teminology...</h2>
+          <h2 className="uppercase mt-10">The terminology...</h2>
           <h3 className="mt-4 mb-8 uppercase font text-2xl">{tech?.name}</h3>
           <p className="text-slate-400">{tech?.description}</p>
         </div>

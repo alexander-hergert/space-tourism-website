@@ -1,40 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import TechnologyNavbarLink from "../../components/Technology/TechnologyNavbarLink";
 
 const TechnologyNavbar = () => {
+  const navlinks = [
+    { link: "1", path: "/technology/launch vehicle" },
+    { link: "2", path: "/technology/spaceport" },
+    { link: "3", path: "/technology/space capsule" },
+  ];
+
   return (
     <div>
-      <ul className="flex justify-center gap-5">
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/technology/launch vehicle"
-          >
-            Launch vehicle
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/technology/spaceport"
-          >
-            Spaceport
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? "blue" : "" };
-            }}
-            to="/technology/space capsule"
-          >
-            Space capsule
-          </NavLink>
-        </li>
+      <ul className="flex justify-center gap-10">
+        {navlinks.map((item) => (
+          <TechnologyNavbarLink key={item.link} {...item} />
+        ))}
       </ul>
     </div>
   );
