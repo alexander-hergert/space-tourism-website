@@ -2,6 +2,7 @@ import React from "react";
 import DestinationNavbar from "../../components/Destination/DestinationNavbar";
 import { useParams } from "react-router";
 import { useGlobalContext } from "../../context";
+import ErrorPage from "../ErrorPage";
 
 const DestinationInnerPage = () => {
   const { data } = useGlobalContext();
@@ -14,6 +15,10 @@ const DestinationInnerPage = () => {
 
   if (factsArray !== undefined) {
     const facts = factsArray[0];
+
+    if (facts === undefined) {
+      return <ErrorPage />;
+    }
 
     return (
       <div className="lg:flex items-center justify-center lg:px-[10rem]">
@@ -28,8 +33,10 @@ const DestinationInnerPage = () => {
           <p className="mt-10 text-center px-5 lg:text-left lg:px-0">
             {facts?.description}
           </p>
-          <div className="text-center uppercase mt-10 py-10 
-          lg:flex items-center gap-10 lg:text-left lg:mt-0">
+          <div
+            className="text-center uppercase mt-10 py-10 
+          lg:flex items-center gap-10 lg:text-left lg:mt-0"
+          >
             <div>
               <h4> Avg. distance</h4>
               <p className="text-white text-4xl">{facts?.distance}</p>

@@ -47,6 +47,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add mobile and tablet design styles to Technology page.
 - Refactor TechnologyNavbar and styles. Create TechnologyNavbarLink page.
 - Add desktop styles to Technology page.
+- Change paths to avoid empty pages. Create Error page.
 
 ### Built with
 

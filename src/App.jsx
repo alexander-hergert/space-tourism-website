@@ -14,7 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <SharedLayout />,
-    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -49,6 +48,10 @@ const router = createBrowserRouter([
             element: <TechnologyInnerPage />,
           },
         ],
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
     ],
   },

@@ -6,9 +6,9 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navlinks = [
     { link: "Home", path: "/" },
-    { link: "Destination", path: "/destination" },
-    { link: "Crew", path: "/crew" },
-    { link: "Technology", path: "/technology" },
+    { link: "Destination", path: "/destination/moon" },
+    { link: "Crew", path: "/crew/commander" },
+    { link: "Technology", path: "/technology/launch vehicle" },
   ];
 
   const handleOpenMenu = () => {

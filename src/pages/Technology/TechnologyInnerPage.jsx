@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TechnologyNavbar from "../../components/Technology/TechnologyNavbar";
 import { useParams } from "react-router";
 import { useGlobalContext } from "../../context";
+import ErrorPage from "../ErrorPage";
 
 const TechnologyInnerPage = () => {
   const { data } = useGlobalContext();
@@ -26,13 +27,19 @@ const TechnologyInnerPage = () => {
   if (techArray !== undefined) {
     const tech = techArray[0];
 
+    if (tech === undefined) {
+      return <ErrorPage />;
+    }
+
     return (
       <>
         <div className="text-center">
           <TechnologyNavbar styles={"lg:hidden"} />
           <div className="lg:flex flex-row-reverse items-center justify-between">
-            <div className="m-auto max-w-[60rem] lg:m-0 lg:min-w-[30rem] mt-10 
-            xl:min-w-[35rem] 2xl:m-auto">
+            <div
+              className="m-auto max-w-[60rem] lg:m-0 lg:min-w-[30rem] mt-10 
+            xl:min-w-[35rem] 2xl:m-auto"
+            >
               {size < 1024 ? (
                 <img
                   className="w-full"

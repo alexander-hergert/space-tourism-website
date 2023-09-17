@@ -2,6 +2,7 @@ import React from "react";
 import CrewNavbar from "../../components/Crew/CrewNavbar";
 import { useParams } from "react-router";
 import { useGlobalContext } from "../../context";
+import ErrorPage from "../ErrorPage";
 
 const CrewInnerPage = () => {
   const { data } = useGlobalContext();
@@ -15,6 +16,10 @@ const CrewInnerPage = () => {
 
   if (crewArray !== undefined) {
     const crew = crewArray[0];
+
+    if (crew === undefined) {
+      return <ErrorPage />;
+    }
 
     return (
       <div
@@ -31,8 +36,12 @@ const CrewInnerPage = () => {
           className="text-center m-auto max-w-[40rem]
          lg:m-0 lg:text-left flex flex-col"
         >
-          <h3 className="text-slate-400 uppercase font lg:text-2xl">{crew?.role}</h3>
-          <h3 className="mt-4 text-2xl uppercase font lg:text-6xl">{crew?.name}</h3>
+          <h3 className="text-slate-400 uppercase font lg:text-2xl">
+            {crew?.role}
+          </h3>
+          <h3 className="mt-4 text-2xl uppercase font lg:text-6xl">
+            {crew?.name}
+          </h3>
           <p className="mt-10 text-slate-400 text-center px-5 lg:text-left lg:px-0">
             {crew?.bio}
           </p>
