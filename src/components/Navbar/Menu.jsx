@@ -12,7 +12,7 @@ const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 10;
 
-  @media screen and (min-width: 786px) {
+  @media screen and (min-width: 768px) {
     visibility: hidden;
   }
 `;
@@ -23,7 +23,7 @@ const Menu = ({ setIsMenuOpen, navlinks }) => {
       <div className="flex items-start justify-around z-[20]">
         <menu>
           {navlinks.map((item) => (
-            <NavbarLink key={item.link} {...item} />
+            <NavbarLink key={item.link} {...item} setIsMenuOpen={setIsMenuOpen}/>
           ))}
         </menu>
         <input

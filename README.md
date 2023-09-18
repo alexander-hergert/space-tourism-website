@@ -48,6 +48,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Refactor TechnologyNavbar and styles. Create TechnologyNavbarLink page.
 - Add desktop styles to Technology page.
 - Change paths to avoid empty pages. Create Error page.
+- Style the Navbar mobile Menu and fix breakpoints, add functionality to auto close. Fix Netlify routing. Add netlify.toml for redirects.
 
 ### Built with
 

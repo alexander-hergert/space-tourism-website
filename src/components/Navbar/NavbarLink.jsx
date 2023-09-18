@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Li = styled.li`
   position: relative;
 
-  @media screen and (min-width: 786px) {
+  @media screen and (min-width: 768px) {
     .active::after {
       content: "";
       width: 100%;
@@ -17,17 +17,41 @@ const Li = styled.li`
     }
   }
 
-  @media screen and (max-width: 786px) {
-    .active {
-      color: red;
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    color: gray;
+    .active::before,
+    .active::after {
+      content: "";
+      width: 0.5rem;
+      height: 100%;
+      border-radius: 5px;
+      position: absolute;
+      background-color: white;
+    }
+    .active,
+    :hover {
+      color: white;
+    }
+
+    .active::before {
+      left: 0;
+    }
+    .active::after {
+      right: 0;
     }
   }
 `;
 
-const NavbarLink = ({ link, path, index }) => {
+const NavbarLink = ({ setIsMenuOpen, link, path, index }) => {
   return (
     <Li>
-      <NavLink className={"max-md:text-4xl uppercase"} to={path}>
+      <NavLink
+        onClick={() => setIsMenuOpen(false)}
+        className={"max-md:text-4xl uppercase"}
+        to={path}
+      >
         <span className="max-lg:hidden font-bold">0{index} &nbsp;&nbsp;</span>
         {link}
       </NavLink>
