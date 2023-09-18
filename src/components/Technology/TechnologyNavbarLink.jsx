@@ -22,7 +22,7 @@ const Li = styled.li`
 const TechnologyNavbarLink = ({ link, path, size }) => {
   return (
     <Li size={size}>
-      <NavLink className={"text-white"} to={path}>
+      <NavLink className={"text-white text-2xl font"} to={path}>
         {link}
       </NavLink>
     </Li>

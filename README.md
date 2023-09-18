@@ -49,6 +49,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Add desktop styles to Technology page.
 - Change paths to avoid empty pages. Create Error page.
 - Style the Navbar mobile Menu and fix breakpoints, add functionality to auto close. Fix Netlify routing. Add netlify.toml for redirects.
+- Finish last styles and add animations. Add accessibility.
 
 ### Built with
 

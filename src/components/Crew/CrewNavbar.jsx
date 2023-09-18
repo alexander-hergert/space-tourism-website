@@ -3,10 +3,10 @@ import CrewNavbarLink from "./CrewNavbarLink";
 
 const CrewNavbar = ({ styles }) => {
   const navlinks = [
-    { path: "/crew/commander" },
-    { path: "/crew/Mission Specialist" },
-    { path: "/crew/pilot" },
-    { path: "/crew/Flight Engineer" },
+    { path: "commander" },
+    { path: "mission Specialist" },
+    { path: "pilot" },
+    { path: "flight Engineer" },
   ];
 
   return (

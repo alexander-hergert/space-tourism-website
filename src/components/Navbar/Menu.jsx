@@ -1,6 +1,8 @@
 import React from "react";
 import NavbarLink from "./NavbarLink";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { fadeDown } from "../../animations";
 
 const Overlay = styled.div`
   position: absolute;
@@ -17,13 +19,23 @@ const Overlay = styled.div`
   }
 `;
 
-const Menu = ({ setIsMenuOpen, navlinks }) => {
+const Menu = ({ setIsMenuOpen, navlinks, pathname, activeTopNav }) => {
   return (
     <Overlay className="relative w-full h-full pt-16">
-      <div className="flex items-start justify-around z-[20]">
+      <motion.div
+        initial={fadeDown.hidden}
+        animate={fadeDown.visible}
+        className="flex items-start justify-around z-[20]"
+      >
         <menu>
           {navlinks.map((item) => (
-            <NavbarLink key={item.link} {...item} setIsMenuOpen={setIsMenuOpen}/>
+            <NavbarLink
+              key={item.link}
+              {...item}
+              setIsMenuOpen={setIsMenuOpen}
+              activeTopNav={activeTopNav}
+              pathname={pathname}
+            />
           ))}
         </menu>
         <input
@@ -32,7 +44,7 @@ const Menu = ({ setIsMenuOpen, navlinks }) => {
           src="/images/shared/icon-close.svg"
           alt="icon-close"
         />
-      </div>
+      </motion.div>
     </Overlay>
   );
 };

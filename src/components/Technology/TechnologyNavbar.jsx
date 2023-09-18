@@ -3,16 +3,16 @@ import TechnologyNavbarLink from "../../components/Technology/TechnologyNavbarLi
 
 const TechnologyNavbar = ({ styles, size }) => {
   const navlinks = [
-    { link: "1", path: "/technology/launch vehicle" },
-    { link: "2", path: "/technology/spaceport" },
-    { link: "3", path: "/technology/space capsule" },
+    { link: "1", path: "launch vehicle" },
+    { link: "2", path: "spaceport" },
+    { link: "3", path: "space capsule" },
   ];
 
   return (
     <div>
       <ul className={`flex justify-center gap-10 lg:flex-col ${styles}`}>
         {navlinks.map((item) => (
-          <TechnologyNavbarLink key={item.link} {...item} size={size}/>
+          <TechnologyNavbarLink key={item.link} {...item} size={size} />
         ))}
       </ul>
     </div>

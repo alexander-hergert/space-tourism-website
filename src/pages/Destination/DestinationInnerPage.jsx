@@ -3,10 +3,14 @@ import DestinationNavbar from "../../components/Destination/DestinationNavbar";
 import { useParams } from "react-router";
 import { useGlobalContext } from "../../context";
 import ErrorPage from "../ErrorPage";
+import { motion } from "framer-motion";
+import { fadeLeft, fadeUp } from "../../animations";
 
 const DestinationInnerPage = () => {
   const { data } = useGlobalContext();
+
   let { name } = useParams();
+
   if (name) {
     name = name[0].toUpperCase() + name.slice(1);
   }
@@ -22,12 +26,30 @@ const DestinationInnerPage = () => {
 
     return (
       <div className="lg:flex items-center justify-center lg:px-[10rem]">
-        <div className="m-auto w-[50vw] max-w-[30rem] mt-10">
-          <img className="w-full" src={facts?.image} alt={facts?.name} />
+        <div
+          className="m-auto w-[50vw] lg:min-w-[30rem] max-w-[30rem] mt-10
+         lg:mr-10 xl:mr-0"
+        >
+          <motion.img
+            key={facts?.name}
+            className="w-full"
+            src={facts?.image}
+            alt={facts?.name}
+            initial={fadeLeft.hidden}
+            animate={fadeLeft.visible}
+          />
         </div>
-        <div className="mt-10 text-slate-400 max-w-[30rem] px-5 m-auto">
+        <motion.div
+          initial={fadeUp.hidden}
+          animate={fadeUp.visible}
+          className="mt-10 text-slate-400 max-w-[30rem] px-5 m-auto 
+        lg:text-base xl:text-xl"
+        >
           <DestinationNavbar />
-          <h3 className="font text-8xl text-center mt-10 text-white uppercase lg:text-left">
+          <h3
+            className="font text-8xl text-center mt-10 text-white uppercase
+           lg:text-left lg:text-4xl xl:text-8xl"
+          >
             {facts?.name}
           </h3>
           <p className="mt-10 text-center px-5 lg:text-left lg:px-0">
@@ -39,14 +61,18 @@ const DestinationInnerPage = () => {
           >
             <div>
               <h4> Avg. distance</h4>
-              <p className="text-white text-4xl">{facts?.distance}</p>
+              <p className="text-white text-4xl lg:text-base xl:text-4xl">
+                {facts?.distance}
+              </p>
             </div>
             <div className="my-10">
               <h4>Est. travel time</h4>
-              <p className="text-white text-4xl">{facts?.travel}</p>
+              <p className="text-white text-4xl lg:text-base xl:text-4xl">
+                {facts?.travel}
+              </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   }

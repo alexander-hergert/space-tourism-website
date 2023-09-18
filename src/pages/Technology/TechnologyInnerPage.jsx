@@ -3,6 +3,8 @@ import TechnologyNavbar from "../../components/Technology/TechnologyNavbar";
 import { useParams } from "react-router";
 import { useGlobalContext } from "../../context";
 import ErrorPage from "../ErrorPage";
+import { motion } from "framer-motion";
+import { fadeLeft, fadeUp } from "../../animations";
 
 const TechnologyInnerPage = () => {
   const { data } = useGlobalContext();
@@ -41,20 +43,28 @@ const TechnologyInnerPage = () => {
             xl:min-w-[35rem] 2xl:m-auto"
             >
               {size < 1024 ? (
-                <img
+                <motion.img
+                  key={tech?.name}
+                  initial={fadeUp.hidden}
+                  animate={fadeUp.visible}
                   className="w-full"
                   src={tech?.image.landscape}
                   alt={tech?.name}
                 />
               ) : (
-                <img
+                <motion.img
+                  key={tech?.name}
+                  initial={fadeUp.hidden}
+                  animate={fadeUp.visible}
                   className="w-full"
                   src={tech?.image.portrait}
                   alt={tech?.name}
                 />
               )}
             </div>
-            <div
+            <motion.div
+              initial={fadeLeft.hidden}
+              animate={fadeLeft.visible}
               className="max-w-[40rem] px-5 m-auto 
             lg:text-left lg:flex items-center gap-10"
             >
@@ -68,7 +78,7 @@ const TechnologyInnerPage = () => {
                 </h3>
                 <p className="text-slate-400">{tech?.description}</p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </>

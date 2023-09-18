@@ -9,7 +9,8 @@ const Li = styled.li`
     color: white;
   }
 
-  .active::after {
+  .active::after,
+  ::after {
     content: "";
     width: 100%;
     height: 0.25rem;
@@ -17,6 +18,16 @@ const Li = styled.li`
     background-color: white;
     top: 2rem;
     left: 0;
+  }
+
+  ::after {
+    content: "";
+    width: 0;
+    transition: width 0.5s;
+  }
+
+  :hover::after {
+    width: 100%;
   }
 `;
 

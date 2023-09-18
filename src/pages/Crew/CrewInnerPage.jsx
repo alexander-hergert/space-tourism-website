@@ -3,6 +3,8 @@ import CrewNavbar from "../../components/Crew/CrewNavbar";
 import { useParams } from "react-router";
 import { useGlobalContext } from "../../context";
 import ErrorPage from "../ErrorPage";
+import { motion } from "framer-motion";
+import { fadeLeft, fadeUp } from "../../animations";
 
 const CrewInnerPage = () => {
   const { data } = useGlobalContext();
@@ -26,13 +28,26 @@ const CrewInnerPage = () => {
         className="flex flex-col md:flex-col-reverse 
       lg:flex-row-reverse justify-center items-center lg:gap-[10rem]"
       >
-        <div className="flex flex-col md:flex-col-reverse">
-          <div className="m-auto w-[50vw] max-w-[30rem] lg:max-w-[40rem]">
-            <img className="w-full" src={crew?.image} alt={crew?.name} />
+        <div
+          initial={fadeUp.hidden}
+          animate={fadeUp.visible}
+          className="flex flex-col md:flex-col-reverse"
+        >
+          <div className="m-auto w-[50vw] max-w-[30rem] lg:max-w-[35rem]">
+            <motion.img
+              initial={fadeUp.hidden}
+              animate={fadeUp.visible}
+              className="w-full"
+              src={crew?.image}
+              alt={crew?.name}
+              key={crew?.name}
+            />
           </div>
           <CrewNavbar styles={"lg:hidden"} />
         </div>
-        <div
+        <motion.div
+          initial={fadeLeft.hidden}
+          animate={fadeLeft.visible}
           className="text-center m-auto max-w-[40rem]
          lg:m-0 lg:text-left flex flex-col"
         >
@@ -46,7 +61,7 @@ const CrewInnerPage = () => {
             {crew?.bio}
           </p>
           <CrewNavbar styles={"max-lg:hidden self-start mt-28"} />
-        </div>
+        </motion.div>
       </div>
     );
   }

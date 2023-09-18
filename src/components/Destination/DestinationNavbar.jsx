@@ -3,10 +3,10 @@ import DestinationNavbarLink from "./DestinationNavbarLink";
 
 const DestinationNavbar = () => {
   const navlinks = [
-    { link: "Moon", path: "/destination/moon" },
-    { link: "Mars", path: "/destination/mars" },
-    { link: "Europa", path: "/destination/europa" },
-    { link: "Titan", path: "/destination/titan" },
+    { link: "Moon", path: "moon" },
+    { link: "Mars", path: "mars" },
+    { link: "Europa", path: "europa" },
+    { link: "Titan", path: "titan" },
   ];
 
   return (

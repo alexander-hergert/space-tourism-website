@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavbarLink from "./NavbarLink";
 import Menu from "./Menu";
+import { useResolvedPath } from "react-router";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +16,12 @@ const Navbar = () => {
     setIsMenuOpen(true);
   };
 
+  //To help to keep navbar active styles
+  const pathObject = useResolvedPath();
+  const { pathname } = pathObject;
+  const parts = pathname.split("/");
+  const activeTopNav = parts[1];
+
   return (
     <nav
       className="absolute flex items-center justify-between 
@@ -28,7 +35,13 @@ const Navbar = () => {
          xl:mr-20 2xl:mr-40"
         >
           {navlinks.map((item, index) => (
-            <NavbarLink key={item.link} {...item} index={index} />
+            <NavbarLink
+              key={item.link}
+              {...item}
+              index={index}
+              activeTopNav={activeTopNav}
+              pathname={pathname}
+            />
           ))}
         </menu>
         <input
@@ -39,7 +52,14 @@ const Navbar = () => {
           onClick={handleOpenMenu}
         />
       </div>
-      {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} navlinks={navlinks} />}
+      {isMenuOpen && (
+        <Menu
+          setIsMenuOpen={setIsMenuOpen}
+          navlinks={navlinks}
+          activeTopNav={activeTopNav}
+          pathname={pathname}
+        />
+      )}
     </nav>
   );
 };

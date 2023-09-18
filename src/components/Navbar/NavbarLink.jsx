@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
@@ -6,7 +6,8 @@ const Li = styled.li`
   position: relative;
 
   @media screen and (min-width: 768px) {
-    .active::after {
+    .active::after,
+    ::after {
       content: "";
       width: 100%;
       height: 0.25rem;
@@ -14,6 +15,16 @@ const Li = styled.li`
       background-color: white;
       top: 4rem;
       left: 0;
+    }
+
+    ::after {
+      content: "";
+      width: 0;
+      transition: width 0.5s;
+    }
+
+    :hover::after {
+      width: 100%;
     }
   }
 
@@ -44,14 +55,29 @@ const Li = styled.li`
   }
 `;
 
-const NavbarLink = ({ setIsMenuOpen, link, path, index }) => {
+const NavbarLink = ({
+  pathname,
+  activeTopNav,
+  setIsMenuOpen,
+  link,
+  path,
+  index,
+}) => {
+  const ref = useRef();
+  const navPath = path.split("/");
+
+  //helps to keep navbar active styles
+  useEffect(() => {
+    ref.current.classList.remove("active");
+
+    if (activeTopNav === navPath[1]) {
+      ref.current.classList.add("active");
+    }
+  }, [pathname]);
+
   return (
-    <Li>
-      <NavLink
-        onClick={() => setIsMenuOpen(false)}
-        className={"max-md:text-4xl uppercase"}
-        to={path}
-      >
+    <Li onClick={() => setIsMenuOpen(false)}>
+      <NavLink ref={ref} className={"max-md:text-4xl uppercase"} to={path}>
         <span className="max-lg:hidden font-bold">0{index} &nbsp;&nbsp;</span>
         {link}
       </NavLink>

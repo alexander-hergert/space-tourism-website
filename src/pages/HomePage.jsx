@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeLeft, fadeUp } from "../animations";
 
 const Style = styled.main`
   min-height: 100vh;
@@ -20,7 +22,9 @@ const Style = styled.main`
 const HomePage = () => {
   return (
     <Style className="lg:flex justify-around items-center">
-      <div
+      <motion.div
+        initial={fadeLeft.hidden}
+        animate={fadeLeft.visible}
         className="max-w-[30rem] px-5 m-auto mt-10 text-slate-400
       lg:m-0"
       >
@@ -36,15 +40,17 @@ const HomePage = () => {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-      </div>
+      </motion.div>
       <div>
-        <div
+        <motion.div
+          initial={fadeUp.hidden}
+          animate={fadeUp.visible}
           className="grid font m-auto mt-20 place-content-center rounded-full w-[12rem] h-[12rem]
           lg:w-[14rem] lg:h-[14rem] 
          bg-white text-black text-2xl lg:m-0"
         >
-          <Link to="/destination">EXPLORE</Link>
-        </div>
+          <Link to="/destination/moon">EXPLORE</Link>
+        </motion.div>
       </div>
     </Style>
   );
