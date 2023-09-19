@@ -21,7 +21,7 @@ const Overlay = styled.div`
 
 const Menu = ({ setIsMenuOpen, navlinks, pathname, activeTopNav }) => {
   return (
-    <Overlay className="relative w-full h-full pt-16">
+    <Overlay className="relative w-full h-full pt-16 backdrop-blur ">
       <motion.div
         initial={fadeDown.hidden}
         animate={fadeDown.visible}

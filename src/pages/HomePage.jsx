@@ -28,7 +28,7 @@ const HomePage = () => {
         className="max-w-[30rem] px-5 m-auto mt-10 text-slate-400
       lg:m-0"
       >
-        <h1 className="m-auto text-center uppercase font-light lg:text-left">
+        <h1 className="m-auto text-center uppercase font-light lg:text-left text-2xl">
           So, you want to travel to
           <span className="text-8xl block mt-10 font md:text-[10rem] text-white lg:text-left">
             SPACE
