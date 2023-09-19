@@ -41,6 +41,7 @@ const Navbar = () => {
               index={index}
               activeTopNav={activeTopNav}
               pathname={pathname}
+              setIsMenuOpen={setIsMenuOpen}
             />
           ))}
         </menu>

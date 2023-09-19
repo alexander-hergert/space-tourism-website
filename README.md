@@ -54,4 +54,6 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
+- [React Router](https://reactrouter.com/en/main/start/tutorial) - To navigate in SPAs
+- [TailwindCSS] (https://tailwindcss.com/docs/installation) - Perfect for React styling
 - [Styled Components](https://styled-components.com/) - For styles
