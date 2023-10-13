@@ -28,7 +28,7 @@ const Li = styled.li`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: 0 2rem;
     margin-bottom: 2rem;
     color: gray;

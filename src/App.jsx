@@ -59,9 +59,9 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <>
+    <section className="h-[100vh]">
       <RouterProvider router={router} />
-    </>
+    </section>
   );
 };
 
